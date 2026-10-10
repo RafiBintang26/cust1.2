@@ -806,3 +806,97 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+/* =========================================================
+   FIX: FRAME MENGIKUTI FOTO, TANPA CROP DAN RUANG PUTIH
+   ========================================================= */
+
+.stage-scrapbook {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+}
+
+.album-desk {
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrapbook-book {
+  width: auto;
+  height: auto;
+  max-width: none;
+  min-height: 0;
+  padding: 12px;
+  box-sizing: content-box;
+  flex: none;
+}
+
+.scrapbook-page {
+  inset: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.scrapbook-page.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.scrapbook-page .page-paper-base,
+.scrapbook-page .plain-page {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.scrapbook-page .plain-photo-slot {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  transform: none !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.scrapbook-page .plain-photo-slot .memory-photo {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  object-fit: fill !important;
+  object-position: center;
+  background: transparent !important;
+}
+
+@media (max-width: 600px) {
+  .scrapbook-book {
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .scrapbook-page {
+    inset: 8px;
+  }
+}
