@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -26,7 +27,7 @@
     <source src="assets/audio/hindia.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- GIFT BOX OPENING: DIPERTAHANKAN -->
+  <!-- GIFT BOX OPENING -->
   <section class="stage-gift" id="stageGift">
     <div class="gift-wrapper" id="giftWrapper">
 
@@ -54,7 +55,7 @@
     </div>
   </section>
 
-  <!-- SCRAPBOOK: 7 SLIDE POLOS -->
+  <!-- SCRAPBOOK -->
   <section class="stage-scrapbook hidden" id="stageScrapbook">
 
     <!-- NAVIGASI -->
@@ -84,7 +85,7 @@
         <article class="scrapbook-page page-1 active" data-page="1">
           <div class="page-paper-base plain-page">
             <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
+              <img src="assets/images/1.jpg" alt="Foto kenangan 1" class="memory-photo">
               <span class="empty-slot-placeholder">Foto 1</span>
             </div>
           </div>
@@ -94,7 +95,7 @@
         <article class="scrapbook-page page-2" data-page="2">
           <div class="page-paper-base plain-page">
             <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
+              <img src="assets/images/2.jpg" alt="Foto kenangan 2" class="memory-photo">
               <span class="empty-slot-placeholder">Foto 2</span>
             </div>
           </div>
@@ -104,7 +105,7 @@
         <article class="scrapbook-page page-3" data-page="3">
           <div class="page-paper-base plain-page">
             <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
+              <img src="assets/images/3.jpg" alt="Foto kenangan 3" class="memory-photo">
               <span class="empty-slot-placeholder">Foto 3</span>
             </div>
           </div>
@@ -114,7 +115,7 @@
         <article class="scrapbook-page page-4" data-page="4">
           <div class="page-paper-base plain-page">
             <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
+              <img src="assets/images/4.jpg" alt="Foto kenangan 4" class="memory-photo">
               <span class="empty-slot-placeholder">Foto 4</span>
             </div>
           </div>
@@ -124,7 +125,7 @@
         <article class="scrapbook-page page-5" data-page="5">
           <div class="page-paper-base plain-page">
             <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
+              <img src="assets/images/5.jpg" alt="Foto kenangan 5" class="memory-photo">
               <span class="empty-slot-placeholder">Foto 5</span>
             </div>
           </div>
@@ -134,7 +135,7 @@
         <article class="scrapbook-page page-6" data-page="6">
           <div class="page-paper-base plain-page">
             <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
+              <img src="assets/images/6.jpg" alt="Foto kenangan 6" class="memory-photo">
               <span class="empty-slot-placeholder">Foto 6</span>
             </div>
           </div>
@@ -144,7 +145,7 @@
         <article class="scrapbook-page page-7" data-page="7">
           <div class="page-paper-base plain-page">
             <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
+              <img src="assets/images/7.jpg" alt="Foto kenangan 7" class="memory-photo">
               <span class="empty-slot-placeholder">Foto 7</span>
             </div>
           </div>
@@ -162,9 +163,10 @@
 
   </section>
 
+  <!-- SCRIPT UTAMA -->
   <script src="script.js"></script>
 
-  <!-- STYLE KHUSUS HALAMAN POLOS -->
+  <!-- STYLE FOTO SCRAPBOOK -->
   <style>
     .plain-page {
       position: relative;
@@ -207,17 +209,20 @@
       overflow: hidden;
     }
 
+    /* FOTO DITAMPILKAN */
     .plain-photo-slot .memory-photo {
-      display: none;
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
     }
 
+    /* Placeholder disembunyikan jika foto tersedia */
     .plain-photo-slot .empty-slot-placeholder {
+      display: none;
       position: absolute;
       inset: 0;
-      display: flex;
       align-items: center;
       justify-content: center;
       color: #b5b5b5;
@@ -225,6 +230,17 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 13px;
       font-weight: 400;
+    }
+
+    /* Jika foto gagal dimuat, tampilkan placeholder */
+    .plain-photo-slot .memory-photo:not([src]),
+    .plain-photo-slot .memory-photo[src=""] {
+      display: none;
+    }
+
+    .plain-photo-slot .memory-photo:not([src]) + .empty-slot-placeholder,
+    .plain-photo-slot .memory-photo[src=""] + .empty-slot-placeholder {
+      display: flex;
     }
 
     @media (max-width: 600px) {
@@ -241,3 +257,4 @@
 
 </body>
 </html>
+```
