@@ -502,24 +502,21 @@ body {
 
 /* FOTO MEMENUHI AREA SLIDE */
 
-```css
-```css
 .plain-photo-slot .memory-photo {
-  display: block;
+  display: block !important;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain !important;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  object-fit: cover;
   object-position: center;
-  background: #ffffff;
 }
-```
-
-  /* Tampilkan seluruh foto tanpa terpotong */
-  object-fit: contain;
-  object-position: center;
-  background: #ffffff;
-}
-```
 
 /* Placeholder disembunyikan secara default */
 
