@@ -1,7 +1,6 @@
-```css
 /* =========================================================
    ANIMATED SCRAPBOOK GIFT
-   CSS FINAL — 7 FOTO FULL SLIDE, RESPONSIVE
+   CSS FINAL - FULL FRAME, RESPONSIVE, 7 SLIDE
    ========================================================= */
 
 :root {
@@ -47,7 +46,11 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 30%, #3D2923 0%, #17110E 100%);
+  background: radial-gradient(
+    circle at 50% 30%,
+    #3D2923 0%,
+    #17110E 100%
+  );
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
@@ -60,16 +63,33 @@ body {
   width: 140%;
   height: 140%;
   background:
-    radial-gradient(circle at 20% 40%, rgba(232, 91, 129, 0.15), transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(255, 200, 87, 0.12), transparent 40%),
-    radial-gradient(circle at 50% 80%, rgba(226, 167, 180, 0.15), transparent 50%);
+    radial-gradient(
+      circle at 20% 40%,
+      rgba(232, 91, 129, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(255, 200, 87, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(226, 167, 180, 0.15),
+      transparent 50%
+    );
   filter: blur(40px);
   animation: floatBg 20s ease-in-out infinite alternate;
 }
 
 @keyframes floatBg {
-  from { transform: scale(1) translate(0, 0); }
-  to { transform: scale(1.08) translate(-20px, 20px); }
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(1.08) translate(-20px, 20px);
+  }
 }
 
 .sparkles-container {
@@ -84,12 +104,21 @@ body {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 10px #FFDF9E, 0 0 20px #FF9EAA;
-  animation: sparkleTwinkle var(--duration, 3s) infinite ease-in-out alternate;
+  animation:
+    sparkleTwinkle var(--duration, 3s)
+    infinite ease-in-out alternate;
 }
 
 @keyframes sparkleTwinkle {
-  from { opacity: 0.2; transform: scale(0.6); }
-  to { opacity: 1; transform: scale(1.4); }
+  from {
+    opacity: 0.2;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.4);
+  }
 }
 
 #backgroundMusic {
@@ -139,8 +168,13 @@ body {
 }
 
 @keyframes giftIdleFloat {
-  from { transform: translateY(0) rotateX(0) rotateY(0); }
-  to { transform: translateY(-12px) rotateX(-3deg) rotateY(4deg); }
+  from {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+
+  to {
+    transform: translateY(-12px) rotateX(-3deg) rotateY(4deg);
+  }
 }
 
 .gift-box-3d:hover {
@@ -173,7 +207,9 @@ body {
   z-index: 2;
   filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
   transform-origin: top center;
-  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s ease;
+  transition:
+    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.7s ease;
 }
 
 .gift-box-3d.opening {
@@ -181,7 +217,8 @@ body {
 }
 
 .gift-box-3d.opening .gift-lid-container {
-  transform: translateY(-240px) rotate(-35deg) rotateY(-15deg) scale(0.85);
+  transform: translateY(-240px) rotate(-35deg)
+    rotateY(-15deg) scale(0.85);
   opacity: 0;
 }
 
@@ -190,10 +227,21 @@ body {
 }
 
 @keyframes boxShake {
-  0%, 100% { transform: translateY(0); }
-  25% { transform: translateY(8px) scaleY(0.95); }
-  50% { transform: translateY(-12px) scaleY(1.05); }
-  75% { transform: translateY(4px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(8px) scaleY(0.95);
+  }
+
+  50% {
+    transform: translateY(-12px) scaleY(1.05);
+  }
+
+  75% {
+    transform: translateY(4px);
+  }
 }
 
 .box-burst {
@@ -212,12 +260,21 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  animation: burstFly 1s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  animation:
+    burstFly 1s cubic-bezier(0.1, 0.8, 0.3, 1)
+    forwards;
 }
 
 @keyframes burstFly {
-  from { transform: translate(0, 0) scale(1); opacity: 1; }
-  to { transform: translate(var(--dx), var(--dy)) scale(0.2); opacity: 0; }
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(var(--dx), var(--dy)) scale(0.2);
+    opacity: 0;
+  }
 }
 
 .gift-prompt {
@@ -255,8 +312,13 @@ body {
 }
 
 @keyframes giftBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .gift-text {
@@ -282,8 +344,15 @@ body {
 }
 
 @keyframes pulseOut {
-  from { transform: scale(0.95); opacity: 0.8; }
-  to { transform: scale(1.25); opacity: 0; }
+  from {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: scale(1.25);
+    opacity: 0;
+  }
 }
 
 /* =========================================================
@@ -294,13 +363,15 @@ body {
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 980px;
+  max-width: none;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 15px;
-  transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+  padding: 16px 24px;
+  transition:
+    opacity 0.8s ease 0.3s,
+    transform 0.8s ease 0.3s;
 }
 
 .stage-scrapbook.hidden {
@@ -310,7 +381,9 @@ body {
   position: absolute;
 }
 
-/* HEADER DAN NAVIGASI */
+/* =========================================================
+   HEADER DAN NAVIGASI
+   ========================================================= */
 
 .album-header {
   width: 100%;
@@ -318,7 +391,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding: 12px 24px;
   background: rgba(46, 33, 26, 0.85);
   backdrop-filter: blur(10px);
@@ -352,7 +425,11 @@ body {
   padding: 8px 18px;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(135deg, var(--color-rose-gold), var(--color-accent-pink));
+  background: linear-gradient(
+    135deg,
+    var(--color-rose-gold),
+    var(--color-accent-pink)
+  );
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -385,35 +462,39 @@ body {
 }
 
 /* =========================================================
-   ALBUM DAN ANIMASI PERPINDAHAN SLIDE
+   AREA ALBUM - FRAME LEBAR DAN TINGGI RESPONSIF
    ========================================================= */
 
 .album-desk {
   width: 100%;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .scrapbook-book {
   position: relative;
   width: 100%;
-  max-width: 840px;
-  height: 570px;
-  padding: 16px;
+  max-width: 1400px;
+  height: clamp(400px, 72vh, 850px);
+  padding: 12px;
   background: #382821;
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 12px #261B16;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 12px #261B16;
   perspective: 1500px;
 }
 
+/* =========================================================
+   SLIDE
+   ========================================================= */
+
 .scrapbook-page {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
+  inset: 12px;
   overflow: hidden;
   border-radius: 0;
   background: #fff;
@@ -440,14 +521,16 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  margin: 0;
   padding: 0;
   border: none;
+  overflow: hidden;
   background: #fff !important;
   background-image: none !important;
 }
 
 /* =========================================================
-   FOTO FULL SLIDE
+   FOTO FULL FRAME - BAGIAN PALING PENTING
    ========================================================= */
 
 .plain-page {
@@ -455,8 +538,8 @@ body {
   width: 100%;
   height: 100%;
   min-height: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   border: none;
   border-radius: 0;
@@ -471,7 +554,7 @@ body {
   display: none !important;
 }
 
-/* Hilangkan dekorasi lama */
+/* Hilangkan dekorasi lama yang tidak digunakan */
 
 .plain-page > .png-layer,
 .plain-page > .handwritten-banner,
@@ -483,7 +566,7 @@ body {
   display: none !important;
 }
 
-/* SLOT FOTO MEMENUHI SELURUH HALAMAN */
+/* Slot foto mengisi seluruh slide */
 
 .plain-photo-slot {
   position: absolute;
@@ -500,7 +583,7 @@ body {
   transform: none;
 }
 
-/* FOTO MEMENUHI AREA SLIDE */
+/* Gambar mengisi area frame tanpa mengubah proporsinya */
 
 .plain-photo-slot .memory-photo {
   display: block !important;
@@ -514,14 +597,19 @@ body {
   padding: 0;
   border: none;
   border-radius: 0;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: #fff;
 }
 
-/* Placeholder disembunyikan secara default */
+/* Jika ingin gambar menutupi frame sampai semua pinggir,
+   ganti object-fit: contain menjadi object-fit: cover.
+   Cover dapat memotong sebagian gambar. */
+
+/* Placeholder */
 
 .plain-photo-slot .empty-slot-placeholder {
-  display: none;
+  display: none !important;
   position: absolute;
   inset: 0;
   align-items: center;
@@ -533,14 +621,14 @@ body {
   font-weight: 400;
 }
 
-/* Tampilkan placeholder jika src kosong */
+/* Jika sumber gambar kosong, sembunyikan gambarnya */
 
 .plain-photo-slot .memory-photo[src=""] {
   display: none !important;
 }
 
 .plain-photo-slot .memory-photo[src=""] + .empty-slot-placeholder {
-  display: flex;
+  display: flex !important;
 }
 
 /* =========================================================
@@ -548,8 +636,8 @@ body {
    ========================================================= */
 
 .album-footer {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   display: flex;
   justify-content: center;
 }
@@ -579,8 +667,13 @@ body {
    ========================================================= */
 
 @media (max-width: 860px) {
+  .stage-scrapbook {
+    padding: 14px 18px;
+  }
+
   .scrapbook-book {
-    height: 540px;
+    height: 68vh;
+    min-height: 400px;
   }
 
   .album-header {
@@ -622,7 +715,8 @@ body {
   }
 
   .stage-scrapbook {
-    padding: 16px 12px;
+    min-height: 100vh;
+    padding: 10px;
   }
 
   .album-header {
@@ -630,6 +724,7 @@ body {
     align-items: center;
     gap: 12px;
     padding: 14px 10px;
+    margin-bottom: 12px;
   }
 
   .album-title-tag h2 {
@@ -652,26 +747,31 @@ body {
     font-size: 12px;
   }
 
+  .album-desk {
+    flex: 1;
+    margin-bottom: 12px;
+  }
+
   .scrapbook-book {
-    height: min(125vw, 560px);
-    min-height: 400px;
-    padding: 10px;
+    width: 100%;
+    height: 65vh;
+    min-height: 350px;
+    max-height: 700px;
+    padding: 8px;
     border-radius: 16px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 6px #261B16;
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.35),
+      0 0 0 6px #261B16;
   }
 
   .scrapbook-page {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+    inset: 8px;
   }
 
   .plain-page {
     min-height: 0;
   }
 
-  /* Foto tetap memenuhi slide di HP */
   .plain-photo-slot {
     inset: 0;
     width: 100%;
@@ -680,6 +780,7 @@ body {
 
   .album-footer {
     margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .btn-replay {
@@ -688,7 +789,9 @@ body {
   }
 }
 
-/* HP sangat kecil */
+/* =========================================================
+   HP SANGAT KECIL
+   ========================================================= */
 
 @media (max-width: 360px) {
   .album-controls {
@@ -706,12 +809,7 @@ body {
   }
 
   .scrapbook-book {
-    min-height: 370px;
-  }
-
-  .plain-photo-slot {
-    width: 100%;
-    height: 100%;
+    min-height: 330px;
   }
 }
 
@@ -734,4 +832,3 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
-```
