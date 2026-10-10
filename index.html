@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,7 +7,6 @@
   <title>Animated Scrapbook Gift 🎁✨</title>
   <meta name="description" content="Website Interaktif Animated Scrapbook Gift dengan 7 Slide Kenangan Indah">
 
-  <!-- Google Fonts for Aesthetic Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,41 +15,31 @@
 </head>
 <body>
 
-  <!-- Background Warm Ambient Atmosphere & Sparkles -->
   <div class="ambient-bg">
     <div class="floating-orbs"></div>
     <div class="sparkles-container" id="sparkles"></div>
   </div>
 
-  <!-- Background Music Player (Hidden without visible controls per requirement #5) -->
   <audio id="backgroundMusic" loop preload="auto">
     <source src="assets/audio/music.mp3" type="audio/mpeg">
     <source src="assets/audio/hindia.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- STAGE 1: 3D GIFT BOX OPENING (VIDEO 2 REFERENCE) -->
+  <!-- STAGE 1: GIFT BOX -->
   <section class="stage-gift" id="stageGift">
     <div class="gift-wrapper" id="giftWrapper">
-      
-      <!-- Sparkle Burst Layer on Opening -->
       <div class="box-burst" id="boxBurst"></div>
 
-      <!-- 3D Styled Gift Box Container -->
       <div class="gift-box-3d" id="giftBox" role="button" aria-label="Buka Kotak Hadiah Spesial">
-        
-        <!-- Lid Component with Ribbon Bow -->
         <div class="gift-lid-container" id="giftLid">
           <img src="assets/gift/box_lid.png" alt="Tutup Kotak Hadiah" class="png-asset gift-lid-png">
         </div>
 
-        <!-- Box Body Component -->
         <div class="gift-body-container" id="giftBody">
           <img src="assets/gift/box_body.png" alt="Kotak Hadiah Spesial" class="png-asset gift-body-png">
         </div>
-
       </div>
 
-      <!-- Interactive Call to Action Prompt -->
       <div class="gift-prompt" id="giftPrompt">
         <div class="pulse-ring"></div>
         <button class="btn-open-gift" id="btnOpenGift">
@@ -58,15 +48,12 @@
           <span class="sub-text">Klik untuk membuka album kenangan</span>
         </button>
       </div>
-
     </div>
   </section>
 
-
-  <!-- STAGE 2: ANIMATED SCRAPBOOK ALBUM (7 SLIDES TOTAL) -->
+  <!-- STAGE 2: SCRAPBOOK - 7 SLIDES -->
   <section class="stage-scrapbook hidden" id="stageScrapbook">
 
-    <!-- Album Top Bar Navigation & Controls -->
     <header class="album-header">
       <div class="album-title-tag">
         <span class="tag-pin">📌</span>
@@ -84,117 +71,76 @@
       </div>
     </header>
 
-
-    <!-- Main Scrapbook Album Desk Workspace -->
     <main class="album-desk">
-      
-      <!-- Physical Scrapbook Book Container -->
       <div class="scrapbook-book" id="scrapbookBook">
 
-        <!-- SLIDE 1 — OPENING SCRAPBOOK -->
+        <!-- SLIDE 1 -->
         <article class="scrapbook-page page-1 active" data-page="1">
           <div class="page-paper-base">
-            
-            <!-- Layered PNG Assets: Torn Papers -->
-            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer torn-kraft-1" style="top: -20px; left: 30px; transform: rotate(-3deg);">
-            <img src="assets/scrapbook/torn_paper_pink.png" alt="Pink Paper Scrap" class="png-layer torn-pink-1" style="top: 40px; right: 20px; transform: rotate(4deg);">
 
-            <!-- Handwritten Title Banner -->
-            <div class="handwritten-banner page1-title" style="top: 25px; left: 70px; transform: rotate(-2deg);">
+            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer torn-kraft-1" style="top:-20px;left:30px;transform:rotate(-3deg);">
+            <img src="assets/scrapbook/torn_paper_pink.png" alt="Pink Paper Scrap" class="png-layer torn-pink-1" style="top:40px;right:20px;transform:rotate(4deg);">
+
+            <div class="handwritten-banner page1-title" style="top:25px;left:70px;transform:rotate(-2deg);">
               <h1 class="script-heading">Our Special Story 💕</h1>
               <p class="script-subtitle">Slide 1 — Opening Scrapbook</p>
             </div>
 
-            <!-- Empty Photo Slot 1 (Polaroid #1) -->
-            <div class="polaroid-wrapper photo-slot polaroid-1" style="top: 135px; left: 60px; transform: rotate(-5deg);">
+            <!-- SATU-SATUNYA SLOT FOTO SLIDE 1 -->
+            <div class="polaroid-wrapper photo-slot polaroid-1" style="top:135px;left:60px;transform:rotate(-5deg);">
               <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
               <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
+                <!-- GANTI src="" DENGAN PATH FOTO LU -->
                 <img src="" alt="" class="memory-photo">
                 <div class="empty-slot-placeholder">
                   <span class="ph-icon">📷</span>
                   <span class="ph-text">Slot Foto Kosong</span>
                 </div>
               </div>
-              <img src="assets/scrapbook/washi_tape_1.png" alt="Washi Tape" class="png-layer tape-top-left" style="top: -15px; left: 15px; transform: rotate(-12deg);">
+              <img src="assets/scrapbook/washi_tape_1.png" alt="Washi Tape" class="png-layer tape-top-left" style="top:-15px;left:15px;transform:rotate(-12deg);">
               <div class="photo-caption">Senyuman Hariku ✨</div>
             </div>
 
-            <!-- Empty Photo Slot 2 (Polaroid #2) -->
-            <div class="polaroid-wrapper photo-slot polaroid-2" style="top: 175px; right: 65px; transform: rotate(6deg);">
-              <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
-              <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
-                <img src="" alt="" class="memory-photo">
-                <div class="empty-slot-placeholder">
-                  <span class="ph-icon">✨</span>
-                  <span class="ph-text">Slot Foto Kosong</span>
-                </div>
-              </div>
-              <img src="assets/scrapbook/washi_tape_2.png" alt="Washi Tape" class="png-layer tape-top-right" style="top: -15px; right: 15px; transform: rotate(15deg);">
-              <div class="photo-caption">Momen Terindah 🌅</div>
-            </div>
+            <img src="assets/scrapbook/flower_sticker.png" alt="Pressed Flowers" class="png-layer flower-sticker-1" style="bottom:25px;left:35px;transform:rotate(-10deg) scale(0.85);">
+            <img src="assets/scrapbook/sticker_heart.png" alt="Heart Sticker" class="png-layer heart-sticker-1" style="top:110px;right:35px;transform:rotate(12deg);">
+            <img src="assets/scrapbook/sticker_star.png" alt="Gold Star" class="png-layer star-sticker-1" style="bottom:115px;right:85px;transform:rotate(-8deg);">
+            <img src="assets/scrapbook/sticker_stamp.png" alt="Love Stamp" class="png-layer stamp-sticker-1" style="top:25px;right:30px;transform:rotate(10deg);">
 
-            <!-- Sticker & Decoration PNG Layers -->
-            <img src="assets/scrapbook/flower_sticker.png" alt="Pressed Flowers" class="png-layer flower-sticker-1" style="bottom: 25px; left: 35px; transform: rotate(-10deg) scale(0.85);">
-            <img src="assets/scrapbook/sticker_heart.png" alt="Heart Sticker" class="png-layer heart-sticker-1" style="top: 110px; right: 35px; transform: rotate(12deg);">
-            <img src="assets/scrapbook/sticker_star.png" alt="Gold Star" class="png-layer star-sticker-1" style="bottom: 115px; right: 85px; transform: rotate(-8deg);">
-            <img src="assets/scrapbook/sticker_stamp.png" alt="Love Stamp" class="png-layer stamp-sticker-1" style="top: 25px; right: 30px; transform: rotate(10deg);">
-
-            <!-- Handwritten Love Note Card -->
-            <div class="love-note-card" style="bottom: 35px; right: 45px; transform: rotate(-3deg);">
+            <div class="love-note-card" style="bottom:35px;right:45px;transform:rotate(-3deg);">
               <p class="note-text">"Setiap detik yang dihabiskan bersamamu adalah momen terbaik yang ingin aku simpan selamanya." 💖</p>
             </div>
 
           </div>
         </article>
 
-
-        <!-- SLIDE 2 — MEMORY PAGE -->
+        <!-- SLIDE 2 -->
         <article class="scrapbook-page page-2" data-page="2">
           <div class="page-paper-base">
 
-            <!-- Background Paper Layering -->
-            <img src="assets/scrapbook/torn_paper_pink.png" alt="Pink Paper Scrap" class="png-layer" style="top: 10px; left: 20px; transform: rotate(-4deg); width: 85%;">
-            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer" style="bottom: 20px; right: 30px; transform: rotate(5deg); width: 80%;">
+            <img src="assets/scrapbook/torn_paper_pink.png" alt="Pink Paper Scrap" class="png-layer" style="top:10px;left:20px;transform:rotate(-4deg);width:85%;">
+            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer" style="bottom:20px;right:30px;transform:rotate(5deg);width:80%;">
 
-            <div class="handwritten-banner page2-title" style="top: 20px; right: 70px; transform: rotate(3deg);">
+            <div class="handwritten-banner page2-title" style="top:20px;right:70px;transform:rotate(3deg);">
               <h2 class="script-heading">Awal Cerita Manis ☕</h2>
               <p class="script-subtitle">Slide 2 — Memory Page</p>
             </div>
 
-            <!-- Empty Photo Slot 3 -->
-            <div class="polaroid-wrapper photo-slot polaroid-3" style="top: 125px; left: 75px; transform: rotate(4deg);">
+            <!-- SATU-SATUNYA SLOT FOTO SLIDE 2 -->
+            <div class="polaroid-wrapper photo-slot polaroid-3" style="top:125px;left:75px;transform:rotate(4deg);">
               <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
               <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
+                <!-- GANTI src="" DENGAN PATH FOTO LU -->
                 <img src="" alt="" class="memory-photo">
                 <div class="empty-slot-placeholder">
                   <span class="ph-icon">☕</span>
                   <span class="ph-text">Slot Foto Kosong</span>
                 </div>
               </div>
-              <img src="assets/scrapbook/washi_tape_2.png" alt="Washi Tape" class="png-layer" style="top: -12px; left: 30%; transform: rotate(-5deg);">
+              <img src="assets/scrapbook/washi_tape_2.png" alt="Washi Tape" class="png-layer" style="top:-12px;left:30%;transform:rotate(-5deg);">
               <div class="photo-caption">Obrolan Tanpa Akhir ☕</div>
             </div>
 
-            <!-- Empty Photo Slot 4 (Vintage Frame) -->
-            <div class="vintage-frame-wrapper photo-slot" style="top: 135px; right: 70px; transform: rotate(-3deg); width: 230px; height: 280px;">
-              <img src="assets/scrapbook/vintage_frame.png" alt="Vintage Frame" class="png-layer vintage-frame-img" style="width: 100%; height: 100%;">
-              <div class="vintage-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
-                <img src="" alt="" class="memory-photo">
-                <div class="empty-slot-placeholder">
-                  <span class="ph-icon">🌸</span>
-                  <span class="ph-text">Slot Foto Kosong</span>
-                </div>
-              </div>
-              <img src="assets/scrapbook/sticker_ribbon.png" alt="Ribbon" class="png-layer" style="top: -20px; right: -15px; width: 65px;">
-              <div class="photo-caption">Momen Klasik 📜</div>
-            </div>
-
-            <!-- Handwritten Letter Note -->
-            <div class="scrap-note-box" style="bottom: 35px; left: 80px; transform: rotate(-3deg); max-width: 320px;">
+            <div class="scrap-note-box" style="bottom:35px;left:80px;transform:rotate(-3deg);max-width:320px;">
               <div class="note-header">
                 <span class="stamp-icon">💌</span>
                 <h3>Catatan Kecil</h3>
@@ -204,115 +150,81 @@
               </p>
             </div>
 
-            <!-- Decorative PNG Stickers -->
-            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="top: 35px; left: 35px; transform: rotate(20deg) scale(0.7);">
-            <img src="assets/scrapbook/sticker_star.png" alt="Star" class="png-layer" style="top: 105px; left: 45%; transform: rotate(15deg);">
-            <img src="assets/scrapbook/sticker_stamp.png" alt="Stamp" class="png-layer" style="bottom: 45px; right: 40px; transform: rotate(-8deg);">
+            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="top:35px;left:35px;transform:rotate(20deg) scale(0.7);">
+            <img src="assets/scrapbook/sticker_star.png" alt="Star" class="png-layer" style="top:105px;left:45%;transform:rotate(15deg);">
+            <img src="assets/scrapbook/sticker_stamp.png" alt="Stamp" class="png-layer" style="bottom:45px;right:40px;transform:rotate(-8deg);">
 
           </div>
         </article>
 
-
-        <!-- SLIDE 3 — PHOTO MEMORIES -->
+        <!-- SLIDE 3 -->
         <article class="scrapbook-page page-3" data-page="3">
           <div class="page-paper-base">
 
-            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer" style="top: -10px; left: 40px; transform: rotate(2deg); width: 90%;">
+            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer" style="top:-10px;left:40px;transform:rotate(2deg);width:90%;">
 
-            <div class="handwritten-banner page3-title" style="top: 20px; left: 50px; transform: rotate(-2deg);">
+            <div class="handwritten-banner page3-title" style="top:20px;left:50px;transform:rotate(-2deg);">
               <h2 class="script-heading">Susunan Kenangan 📸</h2>
               <p class="script-subtitle">Slide 3 — Photo Memories</p>
             </div>
 
-            <!-- Empty Photo Slot 5 -->
-            <div class="polaroid-wrapper photo-slot" style="top: 115px; left: 45px; transform: rotate(-6deg); width: 220px; height: 270px;">
+            <!-- SATU-SATUNYA SLOT FOTO SLIDE 3 -->
+            <div class="polaroid-wrapper photo-slot" style="top:115px;left:45px;transform:rotate(-6deg);width:220px;height:270px;">
               <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
               <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
+                <!-- GANTI src="" DENGAN PATH FOTO LU -->
                 <img src="" alt="" class="memory-photo">
                 <div class="empty-slot-placeholder">
                   <span class="ph-icon">🎆</span>
                   <span class="ph-text">Slot Foto Kosong</span>
                 </div>
               </div>
-              <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top: -12px; left: 15px; transform: rotate(-10deg);">
+              <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top:-12px;left:15px;transform:rotate(-10deg);">
               <div class="photo-caption">Under The Stars 🎆</div>
             </div>
 
-            <!-- Empty Photo Slot 6 -->
-            <div class="polaroid-wrapper photo-slot" style="top: 105px; left: 280px; transform: rotate(3deg); width: 220px; height: 270px;">
-              <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
-              <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
-                <img src="" alt="" class="memory-photo">
-                <div class="empty-slot-placeholder">
-                  <span class="ph-icon">🏖️</span>
-                  <span class="ph-text">Slot Foto Kosong</span>
-                </div>
-              </div>
-              <img src="assets/scrapbook/washi_tape_2.png" alt="Tape" class="png-layer" style="top: -12px; right: 15px; transform: rotate(8deg);">
-              <div class="photo-caption">Liburan Seru 🌊</div>
-            </div>
-
-            <!-- Empty Photo Slot 7 -->
-            <div class="polaroid-wrapper photo-slot" style="top: 125px; right: 40px; transform: rotate(-4deg); width: 220px; height: 270px;">
-              <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
-              <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
-                <img src="" alt="" class="memory-photo">
-                <div class="empty-slot-placeholder">
-                  <span class="ph-icon">🎉</span>
-                  <span class="ph-text">Slot Foto Kosong</span>
-                </div>
-              </div>
-              <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top: -12px; left: 20%; transform: rotate(-5deg);">
-              <div class="photo-caption">Hari Bahagia 💕</div>
-            </div>
-
-            <!-- Love Letter Note Envelope -->
-            <div class="scrap-envelope-note" style="bottom: 30px; left: 50%; transform: translateX(-50%); max-width: 480px; width: 90%;">
-              <h3 class="script-heading-sm" style="text-align: center;">Untukmu yang Teristimewa ❤️</h3>
-              <p class="script-body" style="text-align: center;">
+            <div class="scrap-envelope-note" style="bottom:30px;left:50%;transform:translateX(-50%);max-width:480px;width:90%;">
+              <h3 class="script-heading-sm" style="text-align:center;">Untukmu yang Teristimewa ❤️</h3>
+              <p class="script-body" style="text-align:center;">
                 "Setiap momen yang terukir di lembaran ini adalah bukti betapa berartinya kehadiranmu."
               </p>
             </div>
 
-            <!-- Stickers & Sparkle Details -->
-            <img src="assets/scrapbook/sticker_star.png" alt="Gold Star" class="png-layer" style="top: 20px; right: 45px; transform: rotate(-12deg) scale(1.1);">
-            <img src="assets/scrapbook/sticker_heart.png" alt="Heart" class="png-layer" style="bottom: 40px; right: 50px; transform: rotate(8deg);">
-            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="bottom: 25px; left: 40px; transform: rotate(-15deg) scale(0.8);">
+            <img src="assets/scrapbook/sticker_star.png" alt="Gold Star" class="png-layer" style="top:20px;right:45px;transform:rotate(-12deg) scale(1.1);">
+            <img src="assets/scrapbook/sticker_heart.png" alt="Heart" class="png-layer" style="bottom:40px;right:50px;transform:rotate(8deg);">
+            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="bottom:25px;left:40px;transform:rotate(-15deg) scale(0.8);">
 
           </div>
         </article>
 
-
-        <!-- SLIDE 4 — SPECIAL MOMENTS -->
+        <!-- SLIDE 4 -->
         <article class="scrapbook-page page-4" data-page="4">
           <div class="page-paper-base">
 
-            <div class="handwritten-banner page4-title" style="top: 18px; left: 50%; transform: translateX(-50%); text-align: center;">
+            <div class="handwritten-banner page4-title" style="top:18px;left:50%;transform:translateX(-50%);text-align:center;">
               <h2 class="script-heading">Momen Spesial & Pesan Rahasia 💌</h2>
               <p class="script-subtitle">Slide 4 — Special Moments • Klik foto untuk balik, atau tempel stiker!</p>
             </div>
 
-            <!-- Interactive Flip Empty Photo Slot 8 -->
-            <div class="polaroid-flip-container photo-slot flip-card-1" style="top: 115px; left: 70px; transform: rotate(-4deg);">
+            <!-- SATU-SATUNYA SLOT FOTO SLIDE 4 -->
+            <div class="polaroid-flip-container photo-slot flip-card-1" style="top:115px;left:70px;transform:rotate(-4deg);">
               <div class="polaroid-flip-inner">
-                <!-- Front Side Empty Photo Slot -->
+
                 <div class="polaroid-flip-front">
                   <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid" class="png-layer polaroid-frame-img">
                   <div class="polaroid-photo-box">
-                    <!-- TAMBAHKAN FOTO DI SINI -->
+                    <!-- GANTI src="" DENGAN PATH FOTO LU -->
                     <img src="" alt="" class="memory-photo">
                     <div class="empty-slot-placeholder">
                       <span class="ph-icon">🔄</span>
                       <span class="ph-text">Slot Foto (Klik Balik)</span>
                     </div>
                   </div>
-                  <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top: -12px; left: 20px; transform: rotate(-8deg);">
+                  <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top:-12px;left:20px;transform:rotate(-8deg);">
                   <div class="photo-caption">Klik Untuk Balik 🔄</div>
                 </div>
-                <!-- Back Side Secret Note -->
+
+                <!-- Sisi belakang kartu, bukan slot foto tambahan -->
                 <div class="polaroid-flip-back">
                   <div class="secret-note-content">
                     <span class="note-stamp">Secret Note #1 💖</span>
@@ -320,39 +232,11 @@
                     <span class="flip-hint">Klik untuk balik lagi ↩️</span>
                   </div>
                 </div>
+
               </div>
             </div>
 
-            <!-- Interactive Flip Empty Photo Slot 9 -->
-            <div class="polaroid-flip-container photo-slot flip-card-2" style="top: 115px; right: 70px; transform: rotate(5deg);">
-              <div class="polaroid-flip-inner">
-                <!-- Front Side Empty Photo Slot -->
-                <div class="polaroid-flip-front">
-                  <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid" class="png-layer polaroid-frame-img">
-                  <div class="polaroid-photo-box">
-                    <!-- TAMBAHKAN FOTO DI SINI -->
-                    <img src="" alt="" class="memory-photo">
-                    <div class="empty-slot-placeholder">
-                      <span class="ph-icon">💌</span>
-                      <span class="ph-text">Slot Foto (Klik Balik)</span>
-                    </div>
-                  </div>
-                  <img src="assets/scrapbook/washi_tape_2.png" alt="Tape" class="png-layer" style="top: -12px; right: 20px; transform: rotate(10deg);">
-                  <div class="photo-caption">Klik Untuk Balik 🔄</div>
-                </div>
-                <!-- Back Side Secret Note -->
-                <div class="polaroid-flip-back">
-                  <div class="secret-note-content">
-                    <span class="note-stamp">Secret Note #2 🌊</span>
-                    <p class="script-body">"Setiap perjalanan bersamamu adalah takdir terindah."</p>
-                    <span class="flip-hint">Klik untuk balik lagi ↩️</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Interactive Sticker Selector Toolbar -->
-            <div class="sticker-toolbar" style="bottom: 25px; left: 50%; transform: translateX(-50%);">
+            <div class="sticker-toolbar" style="bottom:25px;left:50%;transform:translateX(-50%);">
               <span class="toolbar-label">Tempel Stiker:</span>
               <button class="sticker-select-btn active" data-sticker="heart">❤️ Hati</button>
               <button class="sticker-select-btn" data-sticker="star">⭐ Bintang</button>
@@ -362,111 +246,76 @@
               <button class="clear-stickers-btn" id="clearStickersBtn">🧹 Bersihkan</button>
             </div>
 
-            <!-- Interactive Sticker Canvas Layer -->
             <div class="interactive-sticker-layer" id="stickerLayer"></div>
 
           </div>
         </article>
 
-
-        <!-- SLIDE 5 — LITTLE MEMORIES -->
+        <!-- SLIDE 5 -->
         <article class="scrapbook-page page-5" data-page="5">
           <div class="page-paper-base">
 
-            <img src="assets/scrapbook/torn_paper_pink.png" alt="Pink Paper Scrap" class="png-layer" style="top: 15px; right: 20px; transform: rotate(3deg); width: 85%;">
+            <img src="assets/scrapbook/torn_paper_pink.png" alt="Pink Paper Scrap" class="png-layer" style="top:15px;right:20px;transform:rotate(3deg);width:85%;">
 
-            <div class="handwritten-banner page5-title" style="top: 22px; left: 60px; transform: rotate(-2deg);">
+            <div class="handwritten-banner page5-title" style="top:22px;left:60px;transform:rotate(-2deg);">
               <h2 class="script-heading">Tawa & Hal-Hal Kecil 🌿</h2>
               <p class="script-subtitle">Slide 5 — Little Memories</p>
             </div>
 
-            <!-- Empty Photo Slot 10 -->
-            <div class="polaroid-wrapper photo-slot" style="top: 125px; left: 65px; transform: rotate(-5deg);">
+            <!-- SATU-SATUNYA SLOT FOTO SLIDE 5 -->
+            <div class="polaroid-wrapper photo-slot" style="top:125px;left:65px;transform:rotate(-5deg);">
               <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
               <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
+                <!-- GANTI src="" DENGAN PATH FOTO LU -->
                 <img src="" alt="" class="memory-photo">
                 <div class="empty-slot-placeholder">
                   <span class="ph-icon">🌿</span>
                   <span class="ph-text">Slot Foto Kosong</span>
                 </div>
               </div>
-              <img src="assets/scrapbook/washi_tape_1.png" alt="Washi Tape" class="png-layer" style="top: -15px; left: 20px; transform: rotate(-10deg);">
+              <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top:-15px;left:20px;transform:rotate(-10deg);">
               <div class="photo-caption">Tawa Konyol 😂</div>
             </div>
 
-            <!-- Empty Photo Slot 11 -->
-            <div class="polaroid-wrapper photo-slot" style="top: 145px; right: 75px; transform: rotate(5deg);">
-              <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
-              <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
-                <img src="" alt="" class="memory-photo">
-                <div class="empty-slot-placeholder">
-                  <span class="ph-icon">🌻</span>
-                  <span class="ph-text">Slot Foto Kosong</span>
-                </div>
-              </div>
-              <img src="assets/scrapbook/washi_tape_2.png" alt="Washi Tape" class="png-layer" style="top: -15px; right: 20px; transform: rotate(12deg);">
-              <div class="photo-caption">Senja Bersama 🌇</div>
-            </div>
-
-            <!-- Quote Note Box -->
-            <div class="love-note-card" style="bottom: 35px; left: 50%; transform: translateX(-50%); max-width: 380px;">
-              <p class="note-text" style="text-align: center;">
+            <div class="love-note-card" style="bottom:35px;left:50%;transform:translateX(-50%);max-width:380px;">
+              <p class="note-text" style="text-align:center;">
                 "Terkadang hal terkecil mengambil ruang terbesar di dalam hati." 🌸
               </p>
             </div>
 
-            <img src="assets/scrapbook/flower_sticker.png" alt="Flower" class="png-layer" style="top: 25px; right: 40px; transform: rotate(15deg) scale(0.85);">
-            <img src="assets/scrapbook/sticker_ribbon.png" alt="Ribbon" class="png-layer" style="bottom: 110px; left: 45%; transform: rotate(-10deg); width: 80px;">
+            <img src="assets/scrapbook/flower_sticker.png" alt="Flower" class="png-layer" style="top:25px;right:40px;transform:rotate(15deg) scale(0.85);">
+            <img src="assets/scrapbook/sticker_ribbon.png" alt="Ribbon" class="png-layer" style="bottom:110px;left:45%;transform:rotate(-10deg);width:80px;">
 
           </div>
         </article>
 
-
-        <!-- SLIDE 6 — ANOTHER CHAPTER -->
+        <!-- SLIDE 6 -->
         <article class="scrapbook-page page-6" data-page="6">
           <div class="page-paper-base">
 
-            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer" style="top: 10px; left: 30px; transform: rotate(-2deg); width: 90%;">
+            <img src="assets/scrapbook/torn_paper_kraft.png" alt="Kraft Paper Scrap" class="png-layer" style="top:10px;left:30px;transform:rotate(-2deg);width:90%;">
 
-            <div class="handwritten-banner page6-title" style="top: 25px; right: 60px; transform: rotate(2deg);">
+            <div class="handwritten-banner page6-title" style="top:25px;right:60px;transform:rotate(2deg);">
               <h2 class="script-heading">Petualangan & Harapan 🌅</h2>
               <p class="script-subtitle">Slide 6 — Another Chapter</p>
             </div>
 
-            <!-- Empty Photo Slot 12 -->
-            <div class="vintage-frame-wrapper photo-slot" style="top: 130px; left: 70px; transform: rotate(3deg); width: 230px; height: 280px;">
-              <img src="assets/scrapbook/vintage_frame.png" alt="Vintage Frame" class="png-layer vintage-frame-img" style="width: 100%; height: 100%;">
+            <!-- SATU-SATUNYA SLOT FOTO SLIDE 6 -->
+            <div class="vintage-frame-wrapper photo-slot" style="top:130px;left:70px;transform:rotate(3deg);width:230px;height:280px;">
+              <img src="assets/scrapbook/vintage_frame.png" alt="Vintage Frame" class="png-layer vintage-frame-img" style="width:100%;height:100%;">
               <div class="vintage-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
+                <!-- GANTI src="" DENGAN PATH FOTO LU -->
                 <img src="" alt="" class="memory-photo">
                 <div class="empty-slot-placeholder">
                   <span class="ph-icon">🌅</span>
                   <span class="ph-text">Slot Foto Kosong</span>
                 </div>
               </div>
-              <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top: -12px; left: 20%; transform: rotate(-6deg);">
+              <img src="assets/scrapbook/washi_tape_1.png" alt="Tape" class="png-layer" style="top:-12px;left:20%;transform:rotate(-6deg);">
               <div class="photo-caption">Langkah Baru 🗺️</div>
             </div>
 
-            <!-- Empty Photo Slot 13 -->
-            <div class="polaroid-wrapper photo-slot" style="top: 135px; right: 70px; transform: rotate(-4deg);">
-              <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
-              <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
-                <img src="" alt="" class="memory-photo">
-                <div class="empty-slot-placeholder">
-                  <span class="ph-icon">✨</span>
-                  <span class="ph-text">Slot Foto Kosong</span>
-                </div>
-              </div>
-              <img src="assets/scrapbook/washi_tape_2.png" alt="Tape" class="png-layer" style="top: -15px; right: 20px; transform: rotate(10deg);">
-              <div class="photo-caption">Cita-Cita Bersama 🌟</div>
-            </div>
-
-            <!-- Note Box -->
-            <div class="scrap-note-box" style="bottom: 35px; left: 60px; transform: rotate(-2deg); max-width: 320px;">
+            <div class="scrap-note-box" style="bottom:35px;left:60px;transform:rotate(-2deg);max-width:320px;">
               <div class="note-header">
                 <span class="stamp-icon">📮</span>
                 <h3>Harapan Manis</h3>
@@ -476,49 +325,46 @@
               </p>
             </div>
 
-            <img src="assets/scrapbook/sticker_stamp.png" alt="Stamp" class="png-layer" style="top: 25px; left: 35px; transform: rotate(-10deg);">
-            <img src="assets/scrapbook/sticker_star.png" alt="Star" class="png-layer" style="bottom: 45px; right: 60px; transform: rotate(12deg);">
+            <img src="assets/scrapbook/sticker_stamp.png" alt="Stamp" class="png-layer" style="top:25px;left:35px;transform:rotate(-10deg);">
+            <img src="assets/scrapbook/sticker_star.png" alt="Star" class="png-layer" style="bottom:45px;right:60px;transform:rotate(12deg);">
 
           </div>
         </article>
 
-
-        <!-- SLIDE 7 — FINAL PAGE -->
+        <!-- SLIDE 7 -->
         <article class="scrapbook-page page-7" data-page="7">
-          <div class="page-paper-base" style="background: linear-gradient(135deg, #FAF6EE, #FDEBF2);">
+          <div class="page-paper-base" style="background:linear-gradient(135deg,#FAF6EE,#FDEBF2);">
 
-            <div class="handwritten-banner page7-title" style="top: 20px; left: 50%; transform: translateX(-50%); text-align: center;">
+            <div class="handwritten-banner page7-title" style="top:20px;left:50%;transform:translateX(-50%);text-align:center;">
               <h2 class="script-heading">Untuk Selamanya & Seterusnya 💖</h2>
               <p class="script-subtitle">Slide 7 — Final Page • Penutup Scrapbook Spesial</p>
             </div>
 
-            <!-- Grand Central Empty Photo Slot 14 -->
-            <div class="polaroid-wrapper photo-slot polaroid-final" style="top: 105px; left: 50%; transform: translateX(-50%) rotate(0deg); width: 280px; height: 330px; z-index: 10;">
+            <!-- SATU-SATUNYA SLOT FOTO SLIDE 7 -->
+            <div class="polaroid-wrapper photo-slot polaroid-final" style="top:105px;left:50%;transform:translateX(-50%) rotate(0deg);width:280px;height:330px;z-index:10;">
               <img src="assets/scrapbook/polaroid_frame.png" alt="Polaroid Frame" class="png-layer polaroid-frame-img">
               <div class="polaroid-photo-box">
-                <!-- TAMBAHKAN FOTO DI SINI -->
+                <!-- GANTI src="" DENGAN PATH FOTO LU -->
                 <img src="" alt="" class="memory-photo">
                 <div class="empty-slot-placeholder">
                   <span class="ph-icon">💖</span>
                   <span class="ph-text">Slot Foto Utama Kosong</span>
                 </div>
               </div>
-              <img src="assets/scrapbook/sticker_ribbon.png" alt="Ribbon" class="png-layer" style="top: -22px; left: 50%; transform: translateX(-50%); width: 85px;">
-              <div class="photo-caption" style="font-size: 24px;">Forever & Always 💍</div>
+              <img src="assets/scrapbook/sticker_ribbon.png" alt="Ribbon" class="png-layer" style="top:-22px;left:50%;transform:translateX(-50%);width:85px;">
+              <div class="photo-caption" style="font-size:24px;">Forever & Always 💍</div>
             </div>
 
-            <!-- Closing Love Letter Card -->
-            <div class="love-note-card" style="bottom: 25px; left: 50%; transform: translateX(-50%); max-width: 480px; width: 90%; text-align: center; border-color: var(--color-accent-pink);">
-              <p class="note-text" style="font-size: 24px; color: var(--color-accent-pink);">
+            <div class="love-note-card" style="bottom:25px;left:50%;transform:translateX(-50%);max-width:480px;width:90%;text-align:center;border-color:var(--color-accent-pink);">
+              <p class="note-text" style="font-size:24px;color:var(--color-accent-pink);">
                 "Terima kasih telah mengisi setiap hari dengan kebahagiaan. Buku ini adalah awal dari jutaan kenangan indah yang akan datang." 💕
               </p>
             </div>
 
-            <!-- Surrounding Decorative PNG Layers -->
-            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="bottom: 20px; left: 25px; transform: rotate(-20deg) scale(0.9);">
-            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="bottom: 20px; right: 25px; transform: rotate(20deg) scale(0.9) scaleX(-1);">
-            <img src="assets/scrapbook/sticker_heart.png" alt="Heart" class="png-layer" style="top: 110px; left: 50px; transform: rotate(-15deg) scale(1.2);">
-            <img src="assets/scrapbook/sticker_heart.png" alt="Heart" class="png-layer" style="top: 110px; right: 50px; transform: rotate(15deg) scale(1.2);">
+            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="bottom:20px;left:25px;transform:rotate(-20deg) scale(0.9);">
+            <img src="assets/scrapbook/flower_sticker.png" alt="Flowers" class="png-layer" style="bottom:20px;right:25px;transform:rotate(20deg) scale(0.9) scaleX(-1);">
+            <img src="assets/scrapbook/sticker_heart.png" alt="Heart" class="png-layer" style="top:110px;left:50px;transform:rotate(-15deg) scale(1.2);">
+            <img src="assets/scrapbook/sticker_heart.png" alt="Heart" class="png-layer" style="top:110px;right:50px;transform:rotate(15deg) scale(1.2);">
 
           </div>
         </article>
@@ -526,7 +372,6 @@
       </div>
     </main>
 
-    <!-- Bottom Footer / Replay Button -->
     <footer class="album-footer">
       <button class="btn-replay" id="replayBtn">
         🔄 Buka Ulang Kotak Hadiah
@@ -538,3 +383,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+```
