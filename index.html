@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -30,28 +29,33 @@
   <!-- GIFT BOX OPENING -->
   <section class="stage-gift" id="stageGift">
     <div class="gift-wrapper" id="giftWrapper">
-
       <div class="box-burst" id="boxBurst"></div>
 
-      <div class="gift-box-3d" id="giftBox" role="button" aria-label="Buka Kotak Hadiah Spesial">
+      <div class="gift-box-3d" id="giftBox"
+           role="button" aria-label="Buka Kotak Hadiah Spesial">
+
         <div class="gift-lid-container" id="giftLid">
-          <img src="assets/gift/box_lid.png" alt="Tutup Kotak Hadiah" class="png-asset gift-lid-png">
+          <img src="assets/gift/box_lid.png"
+               alt="Tutup Kotak Hadiah"
+               class="png-asset gift-lid-png">
         </div>
 
         <div class="gift-body-container" id="giftBody">
-          <img src="assets/gift/box_body.png" alt="Kotak Hadiah" class="png-asset gift-body-png">
+          <img src="assets/gift/box_body.png"
+               alt="Kotak Hadiah"
+               class="png-asset gift-body-png">
         </div>
       </div>
 
       <div class="gift-prompt" id="giftPrompt">
         <div class="pulse-ring"></div>
+
         <button class="btn-open-gift" id="btnOpenGift">
           <span class="gift-emoji">🎁</span>
           <span class="gift-text">Buka Hadiah Spesial Ini</span>
           <span class="sub-text">Klik untuk membuka album kenangan</span>
         </button>
       </div>
-
     </div>
   </section>
 
@@ -163,102 +167,8 @@
 
   </section>
 
-  <!-- SCRIPT UTAMA -->
+  <!-- JAVASCRIPT TETAP -->
   <script src="script.js"></script>
-
-  <!-- STYLE FOTO SCRAPBOOK -->
-  <style>
-    .plain-page {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      min-height: 480px;
-      overflow: hidden;
-      background: #ffffff !important;
-      background-image: none !important;
-      box-shadow: none;
-    }
-
-    .plain-page::before,
-    .plain-page::after {
-      content: none !important;
-      display: none !important;
-    }
-
-    .plain-page > img,
-    .plain-page > .png-layer,
-    .plain-page > .handwritten-banner,
-    .plain-page > .love-note-card,
-    .plain-page > .scrap-note-box,
-    .plain-page > .scrap-envelope-note,
-    .plain-page > .sticker-toolbar,
-    .plain-page > .interactive-sticker-layer {
-      display: none !important;
-    }
-
-    .plain-photo-slot {
-      position: absolute;
-      width: 240px;
-      height: 300px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      box-sizing: border-box;
-      background: #ffffff;
-      border: 1px solid #e5e5e5;
-      overflow: hidden;
-    }
-
-    /* FOTO DITAMPILKAN */
-   ```css
-.plain-photo-slot .memory-photo {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
-  object-position: center;
-  background: #ffffff;
-}
-```
-    }
-
-    /* Placeholder disembunyikan jika foto tersedia */
-    .plain-photo-slot .empty-slot-placeholder {
-      display: none;
-      position: absolute;
-      inset: 0;
-      align-items: center;
-      justify-content: center;
-      color: #b5b5b5;
-      background: #ffffff;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 400;
-    }
-
-    /* Jika foto gagal dimuat, tampilkan placeholder */
-    .plain-photo-slot .memory-photo:not([src]),
-    .plain-photo-slot .memory-photo[src=""] {
-      display: none;
-    }
-
-    .plain-photo-slot .memory-photo:not([src]) + .empty-slot-placeholder,
-    .plain-photo-slot .memory-photo[src=""] + .empty-slot-placeholder {
-      display: flex;
-    }
-
-    @media (max-width: 600px) {
-      .plain-page {
-        min-height: 380px;
-      }
-
-      .plain-photo-slot {
-        width: min(65%, 220px);
-        height: 250px;
-      }
-    }
-  </style>
 
 </body>
 </html>
-```
