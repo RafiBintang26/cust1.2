@@ -1,6 +1,7 @@
+```css
 /* =========================================================
    ANIMATED SCRAPBOOK GIFT
-   CSS FINAL — 7 FOTO, POLOS, RESPONSIVE
+   CSS FINAL — 7 FOTO FULL SLIDE, RESPONSIVE
    ========================================================= */
 
 :root {
@@ -46,11 +47,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at 50% 30%,
-    #3D2923 0%,
-    #17110E 100%
-  );
+  background: radial-gradient(circle at 50% 30%, #3D2923 0%, #17110E 100%);
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
@@ -71,13 +68,8 @@ body {
 }
 
 @keyframes floatBg {
-  from {
-    transform: scale(1) translate(0, 0);
-  }
-
-  to {
-    transform: scale(1.08) translate(-20px, 20px);
-  }
+  from { transform: scale(1) translate(0, 0); }
+  to { transform: scale(1.08) translate(-20px, 20px); }
 }
 
 .sparkles-container {
@@ -96,15 +88,8 @@ body {
 }
 
 @keyframes sparkleTwinkle {
-  from {
-    opacity: 0.2;
-    transform: scale(0.6);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1.4);
-  }
+  from { opacity: 0.2; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1.4); }
 }
 
 #backgroundMusic {
@@ -154,13 +139,8 @@ body {
 }
 
 @keyframes giftIdleFloat {
-  from {
-    transform: translateY(0) rotateX(0) rotateY(0);
-  }
-
-  to {
-    transform: translateY(-12px) rotateX(-3deg) rotateY(4deg);
-  }
+  from { transform: translateY(0) rotateX(0) rotateY(0); }
+  to { transform: translateY(-12px) rotateX(-3deg) rotateY(4deg); }
 }
 
 .gift-box-3d:hover {
@@ -210,21 +190,10 @@ body {
 }
 
 @keyframes boxShake {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  25% {
-    transform: translateY(8px) scaleY(0.95);
-  }
-
-  50% {
-    transform: translateY(-12px) scaleY(1.05);
-  }
-
-  75% {
-    transform: translateY(4px);
-  }
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(8px) scaleY(0.95); }
+  50% { transform: translateY(-12px) scaleY(1.05); }
+  75% { transform: translateY(4px); }
 }
 
 .box-burst {
@@ -247,15 +216,8 @@ body {
 }
 
 @keyframes burstFly {
-  from {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-
-  to {
-    transform: translate(var(--dx), var(--dy)) scale(0.2);
-    opacity: 0;
-  }
+  from { transform: translate(0, 0) scale(1); opacity: 1; }
+  to { transform: translate(var(--dx), var(--dy)) scale(0.2); opacity: 0; }
 }
 
 .gift-prompt {
@@ -293,13 +255,8 @@ body {
 }
 
 @keyframes giftBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .gift-text {
@@ -325,15 +282,8 @@ body {
 }
 
 @keyframes pulseOut {
-  from {
-    transform: scale(0.95);
-    opacity: 0.8;
-  }
-
-  to {
-    transform: scale(1.25);
-    opacity: 0;
-  }
+  from { transform: scale(0.95); opacity: 0.8; }
+  to { transform: scale(1.25); opacity: 0; }
 }
 
 /* =========================================================
@@ -360,7 +310,7 @@ body {
   position: absolute;
 }
 
-/* Header dan navigasi */
+/* HEADER DAN NAVIGASI */
 
 .album-header {
   width: 100%;
@@ -497,7 +447,7 @@ body {
 }
 
 /* =========================================================
-   HALAMAN POLOS DAN SATU SLOT FOTO
+   FOTO FULL SLIDE
    ========================================================= */
 
 .plain-page {
@@ -505,8 +455,9 @@ body {
   width: 100%;
   height: 100%;
   min-height: 0;
-  overflow: hidden;
   padding: 0;
+  margin: 0;
+  overflow: hidden;
   border: none;
   border-radius: 0;
   background: #fff !important;
@@ -520,7 +471,7 @@ body {
   display: none !important;
 }
 
-/* Hilangkan dekorasi lama jika masih ada */
+/* Hilangkan dekorasi lama */
 
 .plain-page > .png-layer,
 .plain-page > .handwritten-banner,
@@ -532,32 +483,42 @@ body {
   display: none !important;
 }
 
-/* Satu slot foto di tengah setiap slide */
+/* SLOT FOTO MEMENUHI SELURUH HALAMAN */
 
 .plain-photo-slot {
   position: absolute;
-  width: 240px;
-  height: 300px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  overflow: hidden;
-}
-
-/* Foto */
-
-.plain-photo-slot .memory-photo {
-  display: block;
+  inset: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+  transform: none;
+}
+
+/* FOTO MEMENUHI AREA SLIDE */
+
+.plain-photo-slot .memory-photo {
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
   object-fit: cover;
   object-position: center;
 }
 
-/* Placeholder hanya tampil jika foto gagal dimuat */
+/* Placeholder disembunyikan secara default */
 
 .plain-photo-slot .empty-slot-placeholder {
   display: none;
@@ -570,6 +531,16 @@ body {
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 400;
+}
+
+/* Tampilkan placeholder jika src kosong */
+
+.plain-photo-slot .memory-photo[src=""] {
+  display: none !important;
+}
+
+.plain-photo-slot .memory-photo[src=""] + .empty-slot-placeholder {
+  display: flex;
 }
 
 /* =========================================================
@@ -614,11 +585,6 @@ body {
 
   .album-header {
     padding: 12px 16px;
-  }
-
-  .plain-photo-slot {
-    width: 230px;
-    height: 290px;
   }
 }
 
@@ -705,10 +671,11 @@ body {
     min-height: 0;
   }
 
+  /* Foto tetap memenuhi slide di HP */
   .plain-photo-slot {
-    width: min(75%, 240px);
-    height: min(72%, 300px);
-    min-height: 180px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .album-footer {
@@ -721,7 +688,7 @@ body {
   }
 }
 
-/* Layar HP sangat kecil */
+/* HP sangat kecil */
 
 @media (max-width: 360px) {
   .album-controls {
@@ -743,12 +710,14 @@ body {
   }
 
   .plain-photo-slot {
-    width: 78%;
-    height: 68%;
+    width: 100%;
+    height: 100%;
   }
 }
 
-/* Hormati pengaturan pengurangan animasi perangkat */
+/* =========================================================
+   AKSESIBILITAS ANIMASI
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .floating-orbs,
@@ -765,3 +734,4 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+```
