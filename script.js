@@ -306,6 +306,55 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       if (stickerLayer) stickerLayer.innerHTML = '';
     });
-  }
+  }/* =========================================================
+   UKUR FRAME BERDASARKAN FOTO AKTIF
+   ========================================================= */
 
+function fitScrapbookFrame() {
+  const book = document.querySelector('.scrapbook-book');
+  const activePage = document.querySelector('.scrapbook-page.active');
+  const photo = activePage?.querySelector('.memory-photo');
+
+  if (!book || !activePage || !photo) return;
+  if (!photo.complete || !photo.naturalWidth || !photo.naturalHeight) return;
+
+  const maxBookWidth = Math.min(1400, window.innerWidth - 40);
+  const maxBookHeight = Math.min(window.innerHeight * 0.62, 850);
+
+  const framePadding = window.innerWidth <= 600 ? 16 : 24;
+
+  const availableWidth = Math.max(100, maxBookWidth - framePadding);
+  const availableHeight = Math.max(100, maxBookHeight - framePadding);
+
+  const scale = Math.min(
+    availableWidth / photo.naturalWidth,
+    availableHeight / photo.naturalHeight
+  );
+
+  const photoWidth = Math.round(photo.naturalWidth * scale);
+  const photoHeight = Math.round(photo.naturalHeight * scale);
+
+  book.style.width = `${photoWidth}px`;
+  book.style.height = `${photoHeight}px`;
+}
+
+document.querySelectorAll('.memory-photo').forEach(photo => {
+  photo.addEventListener('load', fitScrapbookFrame);
+});
+
+const scrapbookObserver = new MutationObserver(() => {
+  requestAnimationFrame(fitScrapbookFrame);
+});
+
+document.querySelectorAll('.scrapbook-page').forEach(page => {
+  scrapbookObserver.observe(page, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+});
+
+window.addEventListener('resize', fitScrapbookFrame);
+window.addEventListener('load', fitScrapbookFrame);
+
+setTimeout(fitScrapbookFrame, 500);
 });
