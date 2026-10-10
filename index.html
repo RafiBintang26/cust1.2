@@ -1,245 +1,117 @@
 ```html
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Scrapbook Gift 🎁</title>
-  <meta name="description" content="Animated Scrapbook Gift dengan 7 slide kenangan">
+<!-- SCRAPBOOK -->
+<section id="stageScrapbook" class="stage-scrapbook" style="display: none;">
+  <div id="album-desk" class="album-desk">
+    <div id="scrapbookBook" class="scrapbook-book">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- BACKGROUND -->
-  <div class="ambient-bg">
-    <div class="floating-orbs"></div>
-    <div class="sparkles-container" id="sparkles"></div>
-  </div>
-
-  <!-- BACKGROUND MUSIC -->
-  <audio id="backgroundMusic" loop preload="auto">
-    <source src="assets/audio/music.mp3" type="audio/mpeg">
-    <source src="assets/audio/hindia.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- GIFT BOX OPENING: DIPERTAHANKAN -->
-  <section class="stage-gift" id="stageGift">
-    <div class="gift-wrapper" id="giftWrapper">
-
-      <div class="box-burst" id="boxBurst"></div>
-
-      <div class="gift-box-3d" id="giftBox" role="button" aria-label="Buka Kotak Hadiah Spesial">
-        <div class="gift-lid-container" id="giftLid">
-          <img src="assets/gift/box_lid.png" alt="Tutup Kotak Hadiah" class="png-asset gift-lid-png">
+      <!-- SLIDE 1 -->
+      <article class="scrapbook-page page-1" data-page="1">
+        <div class="page-paper-base plain-page">
+          <div class="plain-photo-slot">
+            <img src="assets/images/1.jpg" alt="Kenangan 1" class="memory-photo">
+            <span class="empty-slot-placeholder">Foto 1</span>
+          </div>
         </div>
+      </article>
 
-        <div class="gift-body-container" id="giftBody">
-          <img src="assets/gift/box_body.png" alt="Kotak Hadiah" class="png-asset gift-body-png">
+      <!-- SLIDE 2 -->
+      <article class="scrapbook-page page-2" data-page="2">
+        <div class="page-paper-base plain-page">
+          <div class="plain-photo-slot">
+            <img src="assets/images/2.jpg" alt="Kenangan 2" class="memory-photo">
+            <span class="empty-slot-placeholder">Foto 2</span>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <div class="gift-prompt" id="giftPrompt">
-        <div class="pulse-ring"></div>
-        <button class="btn-open-gift" id="btnOpenGift">
-          <span class="gift-emoji">🎁</span>
-          <span class="gift-text">Buka Hadiah Spesial Ini</span>
-          <span class="sub-text">Klik untuk membuka album kenangan</span>
-        </button>
-      </div>
+      <!-- SLIDE 3 -->
+      <article class="scrapbook-page page-3" data-page="3">
+        <div class="page-paper-base plain-page">
+          <div class="plain-photo-slot">
+            <img src="assets/images/3.jpg" alt="Kenangan 3" class="memory-photo">
+            <span class="empty-slot-placeholder">Foto 3</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE 4 -->
+      <article class="scrapbook-page page-4" data-page="4">
+        <div class="page-paper-base plain-page">
+          <div class="plain-photo-slot">
+            <img src="assets/images/4.jpg" alt="Kenangan 4" class="memory-photo">
+            <span class="empty-slot-placeholder">Foto 4</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE 5 -->
+      <article class="scrapbook-page page-5" data-page="5">
+        <div class="page-paper-base plain-page">
+          <div class="plain-photo-slot">
+            <img src="assets/images/5.jpg" alt="Kenangan 5" class="memory-photo">
+            <span class="empty-slot-placeholder">Foto 5</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE 6 -->
+      <article class="scrapbook-page page-6" data-page="6">
+        <div class="page-paper-base plain-page">
+          <div class="plain-photo-slot">
+            <img src="assets/images/6.jpg" alt="Kenangan 6" class="memory-photo">
+            <span class="empty-slot-placeholder">Foto 6</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE 7 -->
+      <article class="scrapbook-page page-7" data-page="7">
+        <div class="page-paper-base plain-page">
+          <div class="plain-photo-slot">
+            <img src="assets/images/7.jpg" alt="Kenangan 7" class="memory-photo">
+            <span class="empty-slot-placeholder">Foto 7</span>
+          </div>
+        </div>
+      </article>
 
     </div>
-  </section>
+  </div>
 
-  <!-- SCRAPBOOK: 7 SLIDE POLOS -->
-  <section class="stage-scrapbook hidden" id="stageScrapbook">
+  <!-- NAVIGASI SCRAPBOOK -->
+  <div class="scrapbook-navigation">
+    <button id="prevPageBtn" type="button">❮</button>
+    <span id="pageIndicator">1 / 7</span>
+    <button id="nextPageBtn" type="button">❯</button>
+  </div>
 
-    <!-- NAVIGASI -->
-    <header class="album-header">
-      <div class="album-title-tag">
-        <h2>Our Memory Scrapbook</h2>
-      </div>
+  <!-- TOMBOL ULANG -->
+  <button id="replayBtn" type="button">Ulangi dari Awal</button>
+</section>
 
-      <div class="album-controls">
-        <button class="nav-btn" id="prevPageBtn" disabled>
-          ‹ Sebelumnya
-        </button>
+<!-- CSS FOTO: menggantikan style inline lama yang menyembunyikan foto -->
+<style>
+  .plain-photo-slot {
+    position: relative;
+    overflow: hidden;
+  }
 
-        <span class="page-indicator" id="pageIndicator">01 / 07</span>
+  .plain-photo-slot .memory-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-        <button class="nav-btn" id="nextPageBtn">
-          Selanjutnya ›
-        </button>
-      </div>
-    </header>
+  .plain-photo-slot .memory-photo[src=""] {
+    display: none;
+  }
 
-    <!-- AREA ALBUM -->
-    <main class="album-desk">
-      <div class="scrapbook-book" id="scrapbookBook">
+  .plain-photo-slot .empty-slot-placeholder {
+    display: none;
+  }
 
-        <!-- SLIDE 1 -->
-        <article class="scrapbook-page page-1 active" data-page="1">
-          <div class="page-paper-base plain-page">
-            <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
-              <span class="empty-slot-placeholder">Foto 1</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SLIDE 2 -->
-        <article class="scrapbook-page page-2" data-page="2">
-          <div class="page-paper-base plain-page">
-            <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
-              <span class="empty-slot-placeholder">Foto 2</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SLIDE 3 -->
-        <article class="scrapbook-page page-3" data-page="3">
-          <div class="page-paper-base plain-page">
-            <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
-              <span class="empty-slot-placeholder">Foto 3</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SLIDE 4 -->
-        <article class="scrapbook-page page-4" data-page="4">
-          <div class="page-paper-base plain-page">
-            <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
-              <span class="empty-slot-placeholder">Foto 4</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SLIDE 5 -->
-        <article class="scrapbook-page page-5" data-page="5">
-          <div class="page-paper-base plain-page">
-            <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
-              <span class="empty-slot-placeholder">Foto 5</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SLIDE 6 -->
-        <article class="scrapbook-page page-6" data-page="6">
-          <div class="page-paper-base plain-page">
-            <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
-              <span class="empty-slot-placeholder">Foto 6</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SLIDE 7 -->
-        <article class="scrapbook-page page-7" data-page="7">
-          <div class="page-paper-base plain-page">
-            <div class="plain-photo-slot">
-              <img src="" alt="" class="memory-photo">
-              <span class="empty-slot-placeholder">Foto 7</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </main>
-
-    <!-- TOMBOL BUKA ULANG -->
-    <footer class="album-footer">
-      <button class="btn-replay" id="replayBtn">
-        🔄 Buka Ulang Kotak Hadiah
-      </button>
-    </footer>
-
-  </section>
-
-  <script src="script.js"></script>
-
-  <!-- STYLE KHUSUS HALAMAN POLOS -->
-  <style>
-    .plain-page {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      min-height: 480px;
-      overflow: hidden;
-      background: #ffffff !important;
-      background-image: none !important;
-      box-shadow: none;
-    }
-
-    .plain-page::before,
-    .plain-page::after {
-      content: none !important;
-      display: none !important;
-    }
-
-    .plain-page > img,
-    .plain-page > .png-layer,
-    .plain-page > .handwritten-banner,
-    .plain-page > .love-note-card,
-    .plain-page > .scrap-note-box,
-    .plain-page > .scrap-envelope-note,
-    .plain-page > .sticker-toolbar,
-    .plain-page > .interactive-sticker-layer {
-      display: none !important;
-    }
-
-    .plain-photo-slot {
-      position: absolute;
-      width: 240px;
-      height: 300px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      box-sizing: border-box;
-      background: #ffffff;
-      border: 1px solid #e5e5e5;
-      overflow: hidden;
-    }
-
-    .plain-photo-slot .memory-photo {
-      display: none;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .plain-photo-slot .empty-slot-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #b5b5b5;
-      background: #ffffff;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 400;
-    }
-
-    @media (max-width: 600px) {
-      .plain-page {
-        min-height: 380px;
-      }
-
-      .plain-photo-slot {
-        width: min(65%, 220px);
-        height: 250px;
-      }
-    }
-  </style>
-
-</body>
-</html>
+  .plain-photo-slot .memory-photo[src=""] + .empty-slot-placeholder {
+    display: flex;
+  }
+</style>
 ```
