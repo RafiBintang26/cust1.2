@@ -502,6 +502,7 @@ body {
 
 /* FOTO MEMENUHI AREA SLIDE */
 
+```css
 .plain-photo-slot .memory-photo {
   display: block !important;
   position: absolute;
@@ -514,9 +515,13 @@ body {
   padding: 0;
   border: none;
   border-radius: 0;
-  object-fit: cover;
+
+  /* Tampilkan seluruh foto tanpa terpotong */
+  object-fit: contain;
   object-position: center;
+  background: #ffffff;
 }
+```
 
 /* Placeholder disembunyikan secara default */
 
