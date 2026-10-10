@@ -1,6 +1,6 @@
 /* =========================================================
    ANIMATED SCRAPBOOK GIFT
-   CSS FINAL - FULL FRAME, RESPONSIVE, 7 SLIDE
+   CSS FINAL - FOTO FULL FRAME, RESPONSIVE, 7 SLIDE
    ========================================================= */
 
 :root {
@@ -86,7 +86,6 @@ body {
   from {
     transform: scale(1) translate(0, 0);
   }
-
   to {
     transform: scale(1.08) translate(-20px, 20px);
   }
@@ -104,8 +103,7 @@ body {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 10px #FFDF9E, 0 0 20px #FF9EAA;
-  animation:
-    sparkleTwinkle var(--duration, 3s)
+  animation: sparkleTwinkle var(--duration, 3s)
     infinite ease-in-out alternate;
 }
 
@@ -114,7 +112,6 @@ body {
     opacity: 0.2;
     transform: scale(0.6);
   }
-
   to {
     opacity: 1;
     transform: scale(1.4);
@@ -171,7 +168,6 @@ body {
   from {
     transform: translateY(0) rotateX(0) rotateY(0);
   }
-
   to {
     transform: translateY(-12px) rotateX(-3deg) rotateY(4deg);
   }
@@ -230,15 +226,12 @@ body {
   0%, 100% {
     transform: translateY(0);
   }
-
   25% {
     transform: translateY(8px) scaleY(0.95);
   }
-
   50% {
     transform: translateY(-12px) scaleY(1.05);
   }
-
   75% {
     transform: translateY(4px);
   }
@@ -260,8 +253,7 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  animation:
-    burstFly 1s cubic-bezier(0.1, 0.8, 0.3, 1)
+  animation: burstFly 1s cubic-bezier(0.1, 0.8, 0.3, 1)
     forwards;
 }
 
@@ -270,7 +262,6 @@ body {
     transform: translate(0, 0) scale(1);
     opacity: 1;
   }
-
   to {
     transform: translate(var(--dx), var(--dy)) scale(0.2);
     opacity: 0;
@@ -315,7 +306,6 @@ body {
   0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-8px);
   }
@@ -348,7 +338,6 @@ body {
     transform: scale(0.95);
     opacity: 0.8;
   }
-
   to {
     transform: scale(1.25);
     opacity: 0;
@@ -462,12 +451,13 @@ body {
 }
 
 /* =========================================================
-   AREA ALBUM - FRAME LEBAR DAN TINGGI RESPONSIF
+   AREA ALBUM
    ========================================================= */
 
 .album-desk {
   width: 100%;
   flex: 1;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,7 +479,7 @@ body {
 }
 
 /* =========================================================
-   SLIDE
+   SLIDE DAN KERTAS ALBUM
    ========================================================= */
 
 .scrapbook-page {
@@ -517,35 +507,23 @@ body {
   z-index: 5;
 }
 
-.page-paper-base {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  background: #fff !important;
-  background-image: none !important;
-}
-
-/* =========================================================
-   FOTO FULL FRAME - BAGIAN PALING PENTING
-   ========================================================= */
-
-.plain-page {
+.page-paper-base,
+.scrapbook-page .plain-page {
   position: relative;
   width: 100%;
   height: 100%;
   min-height: 0;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   border: none;
-  border-radius: 0;
+  overflow: hidden;
   background: #fff !important;
   background-image: none !important;
   box-shadow: none;
+}
+
+.plain-page {
+  border-radius: 0;
 }
 
 .plain-page::before,
@@ -554,7 +532,7 @@ body {
   display: none !important;
 }
 
-/* Hilangkan dekorasi lama yang tidak digunakan */
+/* Sembunyikan dekorasi yang tidak digunakan */
 
 .plain-page > .png-layer,
 .plain-page > .handwritten-banner,
@@ -566,47 +544,45 @@ body {
   display: none !important;
 }
 
-/* Slot foto mengisi seluruh slide */
+/* =========================================================
+   FOTO MENGISI SELURUH FRAME
+   ========================================================= */
 
-.plain-photo-slot {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 0;
+.scrapbook-page .plain-photo-slot {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transform: none !important;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: hidden !important;
   background: #fff;
-  transform: none;
 }
 
-/* Gambar mengisi area frame tanpa mengubah proporsinya */
-
-.plain-photo-slot .memory-photo {
+.scrapbook-page .plain-photo-slot .memory-photo {
   display: block !important;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  max-height: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  object-fit: contain;
-  object-position: center;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
   background: #fff;
 }
 
-/* Jika ingin gambar menutupi frame sampai semua pinggir,
-   ganti object-fit: contain menjadi object-fit: cover.
-   Cover dapat memotong sebagian gambar. */
-
-/* Placeholder */
+/* Placeholder foto kosong */
 
 .plain-photo-slot .empty-slot-placeholder {
   display: none !important;
@@ -620,8 +596,6 @@ body {
   font-size: 13px;
   font-weight: 400;
 }
-
-/* Jika sumber gambar kosong, sembunyikan gambarnya */
 
 .plain-photo-slot .memory-photo[src=""] {
   display: none !important;
@@ -772,10 +746,10 @@ body {
     min-height: 0;
   }
 
-  .plain-photo-slot {
-    inset: 0;
-    width: 100%;
-    height: 100%;
+  .scrapbook-page .plain-photo-slot {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 
   .album-footer {
